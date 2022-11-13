@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        String filePath = "D:\\IntelliJ-IDEA-Saves\\LexicalAnalysis\\src\\cppfile\\test.cpp";
+        String filePath = Main.class.getResource("cppfile/test.cpp").getPath();
         AutoMachine machine = new AutoMachine();
         FileReader reader = new FileReader(filePath);
         Scanner scanner = new Scanner(reader);
@@ -15,11 +15,6 @@ public class Main {
             fragment = scanner.nextLine();
             System.out.println("line words: " + fragment);
             machine.analyzeFragment(fragment);
-            // for (int i = 0; i < fragment.length(); i++) {
-            //     // 对于每一个代码片段，遍历得到每一个字符
-            //     char alpha = fragment.charAt(i);
-            //
-            // }
         }
         machine.displayAnalyzeResults(machine.result);
     }
