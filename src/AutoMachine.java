@@ -59,7 +59,7 @@ public class AutoMachine {
      *
      * @param c        输入的下一字符
      * @param wordType 当前正在判断的单词类型码
-     * @Return int 分析后的单词类型码
+     * @Return int     分析后的单词类型码
      * @author Bubu
      */
     private int judgeCharacter(char c, int wordType) {
