@@ -6,7 +6,6 @@ public class Word {
         this.word = word;
         this.category = category;
     }
-    
     @Override
     public String toString() {
         return "(" + category + ",\"" + word + "\")";
